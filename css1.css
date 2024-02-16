@@ -1,0 +1,230 @@
+*{
+    font-family: 'Dancing Script', cursive;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: wheat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.header{
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    /* backdrop-filter: blur(50px); */
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.contents{
+    margin-top: 320px;
+    /* padding: 10px; */
+
+}
+.logo{
+    width: 300px;
+    position: relative;
+    right: 10%;
+}
+
+.navbar a{
+    color: black;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.icons{
+    font-size: 30px;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.cards{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.flex-item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 230px;
+    height: 600px;
+    /* border: 1px solid; */
+    margin: 20px;
+}
+
+.two{
+    margin-left: 10px;
+}
+.three{
+    margin-left: 10px;
+}
+.four{
+    margin-left: 10px;
+}
+.five{
+    margin-left: 10px;
+}
+.six{
+    margin-left: 10px;
+}
+.seven{
+    margin-left: 10px;
+}
+.eight{
+    margin-left: 10px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    margin-left: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+h3{
+    margin-left: 20px;
+    font-size: 35px;
+    text-align: center;
+}
+h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+.p1{
+    font-size: 20px;
+    text-align: left;
+}
+button{
+    margin-left: 30px;
+    border: 2px solid;
+    border-radius: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+/* Breakpt : 768px nd 992px */
+
+@media (max-width:992px){
+    .header{
+        padding: 10px 2%;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+
+
+}
+
+@media (max-width:289px){
+    p{
+        font-size: 20px;
+    }
+    .cards{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .flex-item{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    h3{
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width:768px){
+
+
+    .icons{
+        display: flex;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: wheat;
+        height: 0px;
+        display: none;
+    }
+
+
+    #check:checked~.navbar{
+        display: block;
+        height: 19rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    p{
+        font-size: 20px;
+    }
+    .cards{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .flex-item{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}    
